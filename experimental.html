@@ -55,9 +55,9 @@
 
         <h2> Picture tag </h2>
         <picture>
-            <source media="(min-width:950px)" srcset="usa.png" width="200" height="100">
-            <source media="(min-width:665px)" srcset="india.png" width="200" height="100">
-            <img src="china.png" alt="pic" style="width:auto;" width="200" height="100">
+            <source media="(min-width:950px)" srcset="imgs/usa.png" width="200" height="100">
+            <source media="(min-width:665px)" srcset="imgs/india.png" width="200" height="100">
+            <img src="imgs/china.png" alt="pic" style="width:auto;" width="200" height="100">
         </picture>
 
         <hr/>
@@ -91,9 +91,9 @@
             <canvas id="canv"></canvas>
 
             <script>
-            var theCanvas = document.getElementById("canv");
-            var context = theCanvas.getContext("2d");
-            context.fillRect(0, 0, 150, 90);
+                var theCanvas = document.getElementById("canv");
+                var context = theCanvas.getContext("2d");
+                context.fillRect(0, 0, 150, 90);
             </script>
 
         <hr/>
@@ -126,13 +126,13 @@
 
         <hr/>
 
-        <h2> optgroup tag, select tag, and option</h2>
+        <h2> optgroup tag, select tag, and option tag</h2>
 
-        <form action="/action_page.php">
+        <form>
             <label for="foods">Choose food:</label>
-            <select name="foods" id="foods">
+            <select name="foods">
                 <optgroup label="junk food">
-                    <option value="fries">banana</option>
+                    <option value="fries">fries</option>
                     <option value="chips">chips</option>
                 </optgroup>
                 <optgroup label="healthy food">
@@ -146,7 +146,7 @@
 
         <h2> label tag and input tag </h2>
 
-        <form action="/action_page.php">
+        <form>
             <input type="radio" id="apple" name="fav_fruit" value="apple">
             <label for="apple">apple</label><br>
             <input type="radio" id="banana" name="fav_fruit" value="banana">
@@ -157,15 +157,15 @@
 
         <hr/>
 
-        <h2> fieldset tag </h2>
+        <h2> fieldset tag, form tag, and legend tag </h2>
 
-        <form action="/action_page.php">
+        <form>
             <fieldset>
                 <legend>Personal Info</legend>
-                <label for="fname">SSN:</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                <label for="lname">Bank account:</label>
-                <input type="text" id="lname" name="lname"><br><br>
+                <label for="ssn">SSN:</label>
+                <input type="text"><br><br>
+                <label for="bankacc">Bank account:</label>
+                <input type="text"><br><br>
             </fieldset>
         </form>
 
@@ -174,7 +174,7 @@
         <h2> textarea tag </h2>
 
         <form>
-            <textarea rows="4" cols="50">
+            <textarea rows="4" cols="45">
                 This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
                 This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
                 This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea. This is a textarea.
@@ -218,7 +218,7 @@
                         Professor
                     </th>
                     <th>
-                        Course
+                        Class
                     </th>
                 </tr>
                 <tr>
@@ -235,10 +235,26 @@
         <h2> figure, figcaption tags </h2>
         
         <figure>
-            <img src="usa.png" width="200" height="100"/>
+            <img src="imgs/usa.png" width="200" height="100"/>
             <figcaption> usa flag </figcaption>
         </figure>
         
+        <hr/>
+
+        <h2> datalist tag </h2>
+
+        <form>
+            <label>Choose your fav fruit from the list:</label>
+            <input list="fruits">
+            <datalist id="fruits">
+              <option value="apple">
+              <option value="banana">
+              <option value="orange">
+              <option value="mango">
+              <option value="grapes">
+            </datalist>
+          </form>
+
         <hr/>
  
     </main>
